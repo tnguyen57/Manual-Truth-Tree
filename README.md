@@ -1,7 +1,7 @@
 <h1>Manual-Truth-Tree </h1>
 
 <h2>Project Description</h2>
-<p>    Manual Truth Tree is a software that will allow users to create truth trees manually. Truth Trees are a powerful logical tool to help prove implications.</p>
+<p> Manual Truth Tree is a software that will allow users to create truth trees manually. Truth Trees are a powerful logical tool to help prove implications.</p>
 
 <p>While there are software to create a truth tree automatically, there are barely any software that let users to create a truth tree directly. The best example of a software that does this is TFTrees on "BramHub". https://github.com/Bram-Hub/TFTrees.</p>
 
