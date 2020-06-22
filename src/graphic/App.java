@@ -5,19 +5,16 @@ import java.awt.Color;
 import javax.swing.*;
 
 public class App extends JFrame{
-	private NodeGraphic ng;
+	private NodeGraphic testNode;
 	private OptionMenu menu;
-	private FileMenu fileMenu;
 	
 	public App() {
 	    menu = new OptionMenu();
 	    setJMenuBar(menu);
 	    
 	    
-		ng = new NodeGraphic();
-		add(ng);
-		
-		
+		testNode = new NodeGraphic();
+		add(testNode);
 		
 		
 		setTitle("Manual-Truth-Tree");

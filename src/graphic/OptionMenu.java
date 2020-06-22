@@ -19,8 +19,4 @@ public class OptionMenu extends JMenuBar{
 		view = new ViewMenu();
 		add(view);
 	}
-	
-	
-	
-
 }
