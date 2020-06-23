@@ -1,12 +1,14 @@
-package graphic;
+package listener;
 
 import java.awt.event.MouseEvent;
 
 import javax.swing.event.MouseInputAdapter;
 
-public class FormulaClickListener extends MouseInputAdapter{
+import graphic.NodeGraphic;
+
+public class FormulaButtonListener extends MouseInputAdapter{
 	private NodeGraphic node;
-	public FormulaClickListener(NodeGraphic node) {
+	public FormulaButtonListener(NodeGraphic node) {
 		this.node = node;
 	}
 	public void mouseClicked(MouseEvent me) {

@@ -10,7 +10,12 @@ import java.util.List;
 
 import javax.swing.*;
 
+import listener.DragListener;
 
+/**
+ * The graphical implementation of single node in the truth tree that is draggable.
+ * @author nguyet15
+ */
 public class NodeGraphic extends JPanel{
 	private List<FormulaTextBox> formulas = new ArrayList<FormulaTextBox>();
 	//private JButton addFormula;
@@ -22,7 +27,11 @@ public class NodeGraphic extends JPanel{
 	private int componentWidth;
 	private int borderSize;
 	
-	
+	/**
+	 * Constructor for the NodeGraphic class.
+	 * 
+	 * @effect: Create an instance of the NodeGraphic class.
+	 */
 	public NodeGraphic(){
 		this.componentHeight = 25;
 		this.borderSize = 10;

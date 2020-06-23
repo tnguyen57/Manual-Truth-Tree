@@ -4,12 +4,21 @@ import java.awt.Color;
 
 import javax.swing.*;
 
+/**
+ * This class is the main GUI for the truth tree program.
+ * @author nguyet15
+ *
+ */
 public class App extends JFrame{
 	private NodeGraphic testNode;
-	private OptionMenu menu;
+	private MenuBar menu;
 	
+	/**
+	 * Create the GUI class for the truth tree program.
+	 * @effect: Create the class that will run the GUI.
+	 */
 	public App() {
-	    menu = new OptionMenu();
+	    menu = new MenuBar();
 	    setJMenuBar(menu);
 	    
 	    

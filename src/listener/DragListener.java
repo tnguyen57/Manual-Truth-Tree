@@ -1,4 +1,4 @@
-package graphic;
+package listener;
 
 import java.awt.Component;
 import java.awt.Point;
