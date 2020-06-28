@@ -7,7 +7,6 @@ import javax.swing.*;
 /**
  * The Menu Bar for the program.
  * @author nguyet15
- *
  */
 public class MenuBar extends JMenuBar{
 	private FileMenu file;

@@ -4,8 +4,7 @@ import javax.swing.*;
 
 /**
  * This class extends JMenua and contains the options for saving/loading/load/exit
- * @author nguyet15
- *
+ * @author nguyet1
  */
 public class FileMenu extends JMenu{
 	private JMenuItem newWindow;

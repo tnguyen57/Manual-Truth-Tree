@@ -17,19 +17,19 @@ import listener.DragListener;
  * @author nguyet15
  */
 public class NodeGraphic extends JPanel{
-	private List<FormulaTextBox> formulas = new ArrayList<FormulaTextBox>();
-	//private JButton addFormula;
-	private AddFormulaButton addFormula;
-	private JButton branch;
-	private MouseMotionAdapter me;
+	protected List<FormulaTextBox> formulas = new ArrayList<FormulaTextBox>();
+	protected List<JButton> buttons =  new ArrayList<JButton>();
 	
-	private int componentHeight;
-	private int componentWidth;
-	private int borderSize;
+	protected AddFormulaButton addFormula;
+	protected JButton branch;
+	protected MouseMotionAdapter me;
+	
+	protected int componentHeight;
+	protected int componentWidth;
+	protected int borderSize;
 	
 	/**
 	 * Constructor for the NodeGraphic class.
-	 * 
 	 * @effect: Create an instance of the NodeGraphic class.
 	 */
 	public NodeGraphic(){
@@ -37,14 +37,16 @@ public class NodeGraphic extends JPanel{
 		this.borderSize = 10;
 		this.componentWidth = 120;
 		
-		setLayout(new GridLayout(3, 1));
 		formulas.add(new FormulaTextBox());
 		add(formulas.get(0));
 		
 		addFormula = new AddFormulaButton(this);
+		buttons.add(addFormula);
 		add(addFormula);
 		
+		
 		branch = new JButton("Branch");
+		buttons.add(branch);
 		add(branch);
 		
 		
@@ -59,24 +61,34 @@ public class NodeGraphic extends JPanel{
 
 	}
 	
-	private void resize() {
-		setLayout(new GridLayout(this.formulas.size() + 2, 1));
-		setSize(this.componentWidth + 2 * this.borderSize, this.componentHeight * (this.formulas.size() + 2) + 2 * this.borderSize);
+	/**
+	 * Resize the Node to fit the graphics and buttons of the node
+	 * @effect: Set the layout and size of the node to fit the buttons and formulas.
+	 */
+	protected void resize() {
+		setLayout(new GridLayout(this.formulas.size() + this.buttons.size(), 1));
+		setSize(this.componentWidth + 2 * this.borderSize, this.componentHeight * (this.formulas.size() + this.buttons.size()) + 2 * this.borderSize);
 	}
 	
+	/**
+	 * Add a formula bar to the node.
+	 * @effects: Add another formula bar to the node above the buttons.
+	 */
 	public void addFormulaBar() {
-		this.remove(addFormula);
-		this.remove(branch);
+		for (int i = 0; i < buttons.size(); i++) {
+			this.remove(buttons.get(i));
+		}
+			
 		this.formulas.add(new FormulaTextBox());
 		this.add(formulas.get(this.formulas.size() - 1));
 		
-		this.add(addFormula);
-		this.add(branch);
+		for (int i = 0; i < buttons.size(); i++) {
+			this.add(buttons.get(i));
+		}
 		
 		this.resize();
 		this.revalidate();
 		this.repaint();
-		
 	}
 	
 	

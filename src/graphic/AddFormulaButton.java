@@ -8,7 +8,6 @@ import listener.FormulaButtonListener;
 /**
  * This class creates the "Add Formula" button in a node. 
  * This button will add another text box to enter a formula in when clicked.
- *
  * @author nguyet15
  */
 public class AddFormulaButton extends JButton{

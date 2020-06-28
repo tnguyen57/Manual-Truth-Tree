@@ -3,7 +3,7 @@ package graphic;
 import javax.swing.*;
 
 /**
- * This class is the Edit drop down menu to the Menu Bar
+ * This class is the Edit drop down menu to the Menu Bar.
  * @author nguyet15
  */
 public class EditMenu extends JMenu{

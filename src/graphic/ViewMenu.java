@@ -5,7 +5,6 @@ import javax.swing.*;
 /**
  * Add the options related to view to the menu bar.
  * @author nguyet15
- *
  */
 public class ViewMenu extends JMenu{
 	private JMenuItem zoomIn;
@@ -14,7 +13,6 @@ public class ViewMenu extends JMenu{
 	
 	/**
 	 * Constructor for the class
-	 * 
 	 * @effect: Create the ViewMenu class to be added to the menu bar
 	 */
 	public ViewMenu() {

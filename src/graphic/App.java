@@ -7,7 +7,6 @@ import javax.swing.*;
 /**
  * This class is the main GUI for the truth tree program.
  * @author nguyet15
- *
  */
 public class App extends JFrame{
 	private NodeGraphic testNode;
@@ -22,8 +21,9 @@ public class App extends JFrame{
 	    setJMenuBar(menu);
 	    
 	    
-		testNode = new NodeGraphic();
+		testNode = new PremiseNodeGraphic();
 		add(testNode);
+		testNode.setLocation(150, 100);
 		
 		
 		setTitle("Manual-Truth-Tree");
