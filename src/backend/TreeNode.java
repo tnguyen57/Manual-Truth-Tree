@@ -38,10 +38,15 @@ public class TreeNode {
 	 * Add a formula to the node.
 	 * @param formula: The formula to be added
 	 * @effect: Add the formula to the node
+	 * @effect: Mark what node the formula belongs to
 	 * @return: Returns true if the formula was added successfully.
 	 */
 	public boolean addFormula(LogicFormula formula) {
-		return formulas.add(formula);
+		boolean result = formulas.add(formula);
+		if (result) {
+			formula.addNode(this);
+		}
+		return result;
 	}
 	
 	/**
