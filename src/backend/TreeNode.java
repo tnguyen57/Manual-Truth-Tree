@@ -150,10 +150,10 @@ public class TreeNode {
 	/**
 	 * Check to see if the child is a children of the node
 	 * @param node: The node to be checked.
-	 * @returns: Returns true if the node is a children of the current node.
+	 * @return: Returns true if the node is a children of the current node.
 	 * 			 Returns false if it is not.
 	 */
-	public boolean isChild(TreeNode node) {
+	public boolean checkIfChild(TreeNode node) {
 		for (int i = 0; i < this.children.size(); i++) {
 			if (this.children.get(i) == node) {
 				return true;
@@ -165,10 +165,18 @@ public class TreeNode {
 	/**
 	 * Check to see if a node is the parent of the current node
 	 * @param: node: The node to be checked
-	 * @returns: Returns true if the node is the parent of the current node.
+	 * @return: Returns true if the node is the parent of the current node.
 	 */
-	public boolean isParent(TreeNode node) {
+	public boolean checkIfParent(TreeNode node) {
 		return this.parent == node;
+	}
+	
+	/**
+	 * Return the number of children for the node
+	 * @return: Returns the number of children that the node has
+	 */
+	public int returnChildrenCount() {
+		return this.children.size();
 	}
 }
 
