@@ -14,10 +14,6 @@ public class Tree {
 	private List<TreeNode> nodes = new ArrayList<TreeNode>();
 	private List<LogicFormula> formulas = new ArrayList<LogicFormula>();
 	
-	private int nextNodeID = 0;
-	private int nextPremiseID = 0;
-	private int nextFormulaID = 0;
-	
 	/**
 	 * Basic constructor for the Tree class with a root node.
 	 * @effect: Create a Tree class object with a root node with id 0
@@ -50,10 +46,9 @@ public class Tree {
 	 * @return: Returns the tree node added
 	 */
 	private TreeNode addNode() {
-		TreeNode node = new TreeNode(nextNodeID);
+		TreeNode node = new TreeNode(this.nodes.size());
 		nodes.add(node);
-		this.addBlankFormula(nextNodeID);
-		nextNodeID++;
+		this.addBlankFormula(this.nodes.size() - 1);
 		return node;
 	}
 	
@@ -67,10 +62,9 @@ public class Tree {
 	 */
 	public void addBlankFormula(int nodeID) {
 		TreeNode node = nodes.get(nodeID);
-		LogicFormula f = new LogicFormula(nextFormulaID);
+		LogicFormula f = new LogicFormula(this.formulas.size());
 		node.addFormula(f);
 		formulas.add(f);
-		nextFormulaID++;
 	}
 	
 	/**
@@ -78,8 +72,7 @@ public class Tree {
 	 * @effect: Add a blank premise formula to the tree
 	 */
 	public void addPremise() {
-		premises.add(new LogicFormula(nextPremiseID, true));
-		nextPremiseID++;
+		premises.add(new LogicFormula(this.premises.size(), true));
 	}
 	
 	/**
