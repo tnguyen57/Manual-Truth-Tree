@@ -73,5 +73,14 @@ public class LogicFormula {
 	public int getID() {
 		return this.id;
 	}
+	
+	/**
+	 * Set the id for LogicFormula
+	 * @param id: The new id of the formula
+	 * @effect: Change the id of the formula with the provided id
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
 
 }

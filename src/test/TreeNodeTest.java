@@ -85,7 +85,6 @@ public class TreeNodeTest {
 		assertTrue("n1 should have 1 children", n1.returnChildrenCount() == 1);
 		n1.removeChild(n3);
 		assertTrue("n1 should have 0 children", n1.returnChildrenCount() == 0);
-		
 	}
 	
 	

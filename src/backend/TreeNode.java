@@ -132,6 +132,15 @@ public class TreeNode {
 	}
 	
 	/**
+	 * Set the id of the node
+	 * @param id: The new id of the node
+	 * @effect: The id of the node is changed to the new one
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	/**
 	 * Return the parent of the node
 	 * @return: Returns the parent of the node
 	 */
